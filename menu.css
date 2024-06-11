@@ -1,0 +1,737 @@
+#section1 img,
+#section2 img,
+#section3 img {
+    max-width: 100%; /* Ensure the image does not exceed the width of its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevent any vertical gaps underneath the image */
+    margin: 0 auto; /* Center the image horizontally */
+}
+/*mobile*/
+#section1 img,
+#section2 img,
+#section3 img {
+   max-height: 45vh; /* Set a smaller height for mobile devices */
+   transition: transform 0.3s ease;
+}
+#section1 img:hover,
+#section2 img:hover,
+#section3 img:hover {
+    transform: scale(1.05); /* Scale the image up a bit on hover */
+}
+
+/* Global styles */
+body {
+    font-family: 'Old Standard TT', sans-serif;
+    background-image: url(images/dark-plate-with-plums-dark-background.jpg);
+    background-position: right;
+    background-attachment: fixed;
+    background-size: 70vh;
+    font: 15px/1.7;
+    height: 100vh;
+    display: grid;
+    margin: 0;
+    padding: 0 15% 5% 22%;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: auto auto auto auto;
+}
+
+/* Regular #wrap styles */
+#wrap {
+    grid-column: 2 / 3; /* Place dropdown in first column */
+    grid-row: 3/4; 
+    background-color: #0d0d0d;
+    color: #fff;
+    margin: 0 auto 5%;
+    padding: 0 10% 0 6%;
+    width: 110%;
+    border-radius: 10px;
+    border: 2px solid;
+}
+
+/* Wine body styles */
+#body_wine {
+    background-image: none;
+    font-family: 'Old Standard TT', sans-serif;
+    margin: 0 auto;
+    background-size: cover;
+    margin-right: 7%;
+    padding-left: 5%; 
+    height: 100vh;
+    color: #000;
+    background-color: #000;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+}
+
+#wrap_wine{
+    margin: 0 auto;
+    padding: 2%;
+    width: 120%;
+    background-color: #fff;
+}
+.dropdown{
+    grid-column: 2 / 3; /
+    grid-row: 1/2; 
+    position: relative;
+    padding-left: 70%;
+}
+/* Style the dropdown button */
+.dropbtn {
+    background-color: #844200;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 20px;
+  }
+  
+  /*  dropdown content */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    border: 0.5px solid #000;
+    display: block;
+  }
+  
+  /* dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* background color of the dropdown button on hover */
+  .dropdown:hover .dropbtn {
+    background-color: #ce6700;
+  }
+  nav{
+    display: none;
+  }
+
+  /* header style */
+header{
+    font-family: 'Cinzel Decorative', sans-serif;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    color: #fff;
+    margin: 20px;
+    padding-top: 8%;
+    padding-bottom: 20%;
+    margin-bottom: 5%;
+}
+header h1{
+    font-family: 'Cinzel Decorative';
+    color: #fff;
+    text-shadow: 2px 2px #0d0d0d;
+    font-size: 35px;
+    position: relative;
+    left: -15%; /* Adjust to match the border overflow */
+    top: -10%;
+    width: 110%; /* Adjust to match the border overflow */
+    margin: 0;
+    margin-left: 10px;
+    padding: 5% 10%; /* Remove any default padding */
+    border: 2px solid #844200;
+}
+header img{
+    height: 20vh;
+    padding-left: 20%;
+}
+header ul{
+    list-style: none;
+}
+header li{
+    display: inline;
+    border-right: 1px solid #fff;
+    padding-right: 2%;
+    padding-left: 2%;
+    font-size: 20px;
+}
+header li:first-child{
+    border-left: 1px solid #fff;
+}
+header a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#header_wine{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 100%;
+    margin: 0;
+    padding: 0 auto;
+}
+#header_wine h1{
+    font-family: 'Cinzel Decorative', sans-serif;
+    color: #000;
+    text-shadow: none;
+    text-align: center;
+    top: -10%;
+    width: 110%; /* Adjust to match the border overflow */
+    margin: 0 -15%; /* Remove any default margin */
+    padding: 5% 10%;
+    border: 2px solid #844200;
+}
+
+main p{
+    text-align: left;
+}
+
+main h2{
+    border-bottom: 1px solid #fff;
+}
+
+#main_wine{
+    display: flex;
+    flex-direction: column;
+}
+#main_wine p{
+    font-size: 16px;
+    line-height: 1.4;
+    color: #000;
+    background-color:  rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+}
+
+#section1{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-image: url("images/mora.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-color: rgba(255, 255, 255, 0.315);
+}
+#section1 img{
+    float: left;
+    border-radius: 30%;
+    box-shadow: inset 10px 10px 10px rgba(255, 255, 255, 0.2); 
+}
+
+#section2{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background-image: url("images/pompelmo-rosa.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+#section2 img{
+    float: right;
+    border-radius: 50px; 
+    box-shadow: inset 0 1px 10px 10px rgba(255, 255, 255, 0.2); 
+    
+}
+#section3{
+    grid-column: 1/2;
+    grid-row: 4/5;
+    background-image: url("images/foglia-lampone.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+#section3 img{
+    float: left;
+    border-radius: 50px;
+    box-shadow: inset 10px 10px 10px rgba(255, 255, 255, 0.2); 
+}
+#section3 a{
+    color:#ce6700;
+    text-decoration: none;
+}
+
+footer{
+    grid-column: 1/3;
+    grid-row: 4/5;
+    width: 100%;
+}
+footer ul{
+    list-style: none;
+}
+footer li{
+    display: inline;
+    padding-left: 1%;
+}
+footer a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#footer_wine{
+        grid-column: 1/2;
+        grid-row: 5/6;
+        background-color: #111111;
+        padding: 2%;
+        width: 85vw;
+        margin-right: 50px;
+        border-radius: 10px;
+}
+    #footer_wine ul{
+        list-style: none;
+        margin: 0 auto;
+        margin-right: 50px;
+        padding: 0;
+        text-align: center;
+    }
+    #footer_wine li{
+        display: inline;
+        padding: 1%;
+    }
+    #footer_wine a{
+        font-family: 'Julius Sans One', Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        color: #fff;
+    }
+
+@media screen and (min-width: 480px){
+    body {
+        background-image: url(images/dark-plate-with-plums-dark-background.jpg);
+        background-position: right;
+        background-attachment: fixed;
+        background-size: 95vh;
+        font-family: 'Old Standard TT', sans-serif;
+        height: 100vh;
+        display: grid;
+        margin: 0;
+        padding: 0 auto;
+        grid-template-columns: 15% 80% 15%;
+        grid-template-rows: auto auto;
+    }
+    #wrap{
+        grid-column: 2 / 3; 
+        grid-row: 3/4; 
+        margin: 0 20%;
+        padding: 0 auto;
+        width: 90%;
+    }
+    .dropdown{
+        grid-column: 3 / 4; 
+        grid-row: 1/2; 
+        position: relative;
+        padding-left: 70%;
+    }
+    .dropbtn {
+        background-color: #844200;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border-radius: 50%;
+        cursor: pointer;
+        margin: 20px;
+      }
+
+        /* header style */
+header{
+    font-family: 'Cinzel Decorative', sans-serif;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    color: #fff;
+    margin: 20px;
+    padding-top: 8%;
+    padding-bottom: 10%;
+    margin-bottom: 5%;
+}
+header h1{
+    font-size: 40px;
+}
+header img{
+    height: 30vh;
+    padding-left: 1%;
+}
+    header ul{
+        list-style: none;
+        text-align: center;
+    }
+    header li{
+        display: inline;
+        border-right: 1px solid #fff;
+        padding-right: 4%;
+        padding-left: 4%;
+    }
+    header li:first-child{
+        border-left: 1px solid #fff;
+    }
+    header a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 25px;
+    }
+
+      main h3{
+        text-align: center;
+      }
+      
+      main p{
+        text-align: left;
+      }
+      footer{
+        grid-column: 1/3;
+        grid-row: 4/5;
+        width: 100%;
+        padding-top: 10%;
+    }
+    footer ul{
+        list-style: none;
+        text-align: center;
+    }
+    footer li{
+        display: inline;
+        padding-left: 4%;
+    }
+    footer a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+    }
+    #body_wine{
+        font-family: 'Old Standard TT', sans-serif;
+        margin: 0 auto;
+        padding: 0;
+        background-color: #000;
+        background-size: cover;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
+
+    #wrap_wine{
+        background-color: #fff;
+        margin: 0 auto;
+        padding: 1.5%;
+        width: 85%;
+    }
+   
+    #header_wine{
+        background-color: #111111;
+        grid-column: 1/3;
+        grid-row: 1/2;
+        display: flex;
+        padding: 0 auto;
+        align-items: flex-end;
+        padding-top: 1%;
+        border-radius: 10px;
+        position: relative;
+        z-index: 1;
+    }
+    #header_wine h1{
+        color: #fff;
+        font-size: 35px;
+        text-align: center;
+        width: 100%; /* Adjust to match the border overflow */
+        margin: 0;
+        padding: 5% 20%;
+        
+    }
+    #main_wine{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #section1{
+        background-image: url("images/mora.svg"), url("images/grape.svg");
+        background-repeat: no-repeat;
+        background-position: right, top left;
+        background-size: 40%;
+        background-attachment: fixed;
+        overflow: hidden;
+    }
+    #section1 img, #section2 img, #section3 img{
+        max-height: 100%;
+    }
+    
+    #section2{
+      
+        background-image: url("images/fragola.svg"), url("images/pompelmo-rosa.svg");
+        background-size: 30%;
+        background-repeat: no-repeat;
+        background-position: right, left;
+        background-attachment: fixed;
+        overflow: hidden;
+    }
+
+    #section3{
+      
+        background-image: url("images/cacao.svg"), url("images/foglia-lampone.svg");
+        background-size: 40%;
+        background-repeat: no-repeat;
+        background-position: right, left;
+        background-attachment: fixed;
+    }
+    #section3 a{
+        color:#ce6700;
+        text-decoration: none;
+    }
+ 
+    #footer_wine{
+        grid-column: 1/2;
+        grid-row: 5/6;
+        background-color: #111111;
+        padding: 2%;
+        width: 80vw;
+        border-radius: 10px;
+    }
+    #footer_wine ul{
+        text-align: center;
+    }
+    #footer_wine li{
+        display: inline;
+        padding: 1%;
+    }
+    #footer_wine a{
+        font-family: 'Julius Sans One', Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        font-size: 19px;
+        color: #fff;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    body {
+        background-color: #000;
+        background-image: url(images/dark-plate-with-plums-dark-background.jpg);
+        background-position: left;
+        background-attachment: fixed;
+        background-size: 110vh;
+        background-repeat: no-repeat;
+        font-family: 'Old Standard TT', sans-serif;
+        font: 18px/1.7;
+        height: 100vh;
+        margin: 0;
+        padding: 0 auto;
+        grid-template-columns: 10% 70% 20%;
+        grid-template-rows: auto auto auto;
+    }
+    #wrap{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        width: 100%;
+        margin: 0 auto;
+        padding: 5% 5%;
+        height: 100%;
+        margin-bottom: 20px;
+    }
+    .dropbtn {
+        display: none;
+      }
+   
+      .logo{
+        padding-top: 1%;
+        height: 25vh;
+        padding-left: 30px;
+        padding-bottom: 1%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    /* nav style */
+    nav{
+        display: block;
+        grid-column: 1/3;
+        grid-row: 1/2;
+        width: 100%;
+    }
+    nav ul, footer ul{
+        list-style: none;
+        padding: 0;
+        padding-top: 50px;
+        text-align: center;
+    }
+    nav li, footer li{
+        display: inline;
+        padding: 4%;
+    }
+    nav a, footer a{
+        text-decoration: none;
+        font-size: 20px;
+        color: #fff;
+    }
+    
+        /* header style */
+header{
+    font-family: 'Cinzel Decorative', sans-serif;
+    grid-column: 1/4;
+    grid-row: 1/2;
+    color: #fff;
+    margin: 10px;
+    padding-top: 8%;
+    padding-bottom: 10%;
+    margin-bottom: 5%;
+}
+header h1{
+        font-size: 55px;
+        text-align: center;
+}
+
+    header ul{
+        list-style: none;
+        text-align: center;
+    }
+    header li{
+        display: inline;
+        border-right: 1px solid #fff;
+        padding-right: 4%;
+        padding-left: 4%;
+        font-size: 30px;
+    }
+    header li:first-child{
+        border-left: 1px solid #fff;
+    }
+    header a{
+        text-decoration: none;
+        color: #fff;
+    }
+    main{
+        height: 90vh;
+    }
+      main h3{
+        text-align: center;
+        font-size: 20px;
+      }
+      main h2{
+        font-size: 30px;
+    }
+      
+      main p{
+        text-align: left;
+        font-size: 18px;
+      }
+      #body_wine{
+      grid-template-columns: 33% 35% 33%;
+      grid-template-rows: auto auto auto;
+      height: 100vh;
+      width: 100vw;
+      font-family: 'Old Standard TT', sans-serif;
+      margin: 0 auto;
+      padding: 0;
+  }
+
+  #wrap_wine{
+      background-color: #fff;
+      margin: 0 auto;
+      margin-left: 80px;
+      padding: 1.5%;
+      width: 90vw;
+      position: relative;
+
+      transform: translateX(-50%, -50%);
+  }
+  .dropbtn{
+      display: none;
+  }
+
+  footer{
+      grid-column: 1/4;
+      grid-row: 3/4;
+      padding: 2%;
+      margin-top: 20px;
+  }
+  footer ul{
+      text-align: center;
+  }
+  footer li{
+      display: inline;
+      border-bottom: none;
+      padding: 2%;
+  }
+  footer a{
+      color: #fff;
+  }
+  #header_wine{
+    background-color: #fff;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    display: flex;
+    align-items: flex-end;
+    overflow: visible;
+}
+#header_wine h1{
+    font-family: 'Cinzel Decorative', sans-serif;
+    font-size: 35px;
+    color: #000;
+    left: 3px;
+    top: -10%;
+    width: 190%; 
+    margin: 0 auto; 
+    padding: 5% 10%; 
+    text-align: center;
+}
+#main_wine {
+    grid-column: 1/4;
+    grid-row: 2/5;
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: flex-start;
+    position: relative;
+}
+
+#main_wine p {
+    padding: 3%;
+    margin-top: 20px; /* Add margin to separate the paragraph from the images */
+}
+
+#section1,
+#section2,
+#section3 {
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 0 10px;
+    background-size: 30vh;
+    margin-bottom: 20px; /* Add margin to separate the images */
+}
+
+#section1 {
+    background-position: left;
+}
+#section2 img{
+    float: left;
+}
+
+#section2 {
+    background-position: center;
+}
+
+#section3 {
+    background-position: right;
+}
+
+#footer_wine{
+    grid-column: 1/4;
+    grid-row: 5/6;
+    width: 86vw;
+    background-color: #111111;
+    padding: 2%;
+}
+#footer_wine ul{
+    text-align: center;
+}
+#footer_wine li{
+    display: inline;
+    border-bottom: none;
+    padding: 2%;
+}
+#footer_wine a{
+    color: #fff;
+}
+
+}
+
+
+
+
+
+
